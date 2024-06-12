@@ -17,7 +17,7 @@ import recipeView from './views/recipeView.js';
 //Search query view import
 import searchView from './views/searchView.js';
 
-import resultsView from './views/resultVIew.js';
+import resultsView from './views/resultView.js';
 
 import paginationView from './views/paginationView.Js';
 
