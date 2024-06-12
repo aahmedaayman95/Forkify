@@ -1,4 +1,4 @@
-import { TIMEOUT_SEC } from '../../../final/src/js/config';
+import { TIMEOUT_SEC } from './config';
 import { TIMEOUT_SECONDS } from './config';
 
 //a function that stops api call after a certain time , so that we can avoid long api calls and stop them
