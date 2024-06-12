@@ -1,4 +1,3 @@
-import { TIMEOUT_SEC } from './config';
 import { TIMEOUT_SECONDS } from './config';
 
 //a function that stops api call after a certain time , so that we can avoid long api calls and stop them
@@ -45,7 +44,7 @@ export const sendJSON = async function (url, uploadData) {
       body: JSON.stringify(uploadData),
     });
 
-    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SECONDS)]);
     console.log('Respond inside sendJSON');
     console.log(res);
     const data = await res.json();
@@ -72,7 +71,7 @@ export const AJAX = async function (url, uploadData = undefined) {
         })
       : fetch(url);
 
-    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SECONDS)]);
     const data = await res.json();
 
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
